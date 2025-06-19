@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 //rafce
-const layout = ({ children }) => {
+const layout = ({ children } : {children: React.ReactNode}) => {
   return (
     <html>
       <body>

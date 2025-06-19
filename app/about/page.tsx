@@ -14,16 +14,23 @@ const fetchTodos = async() => {
   return data
 }
 
+type Data = {
+  id : string
+  completed : string
+  title : string
+  userId : string
+}
+//const layout = ({ children } : {children: React.ReactNode}) => { กำหนดtypeแบบอยู่ใน{}
 const AboutPage = async() => {
   //JS
-    const data = await fetchTodos()
+    const data:Data[] = await fetchTodos() //กำหนดtypeแบบ: 
     console.log(data)
   return (
     <div>
       AboutPage
       {
         data.map((item,index)=>{
-          return <li key ={index}>{item.title}</li>
+          return <li key ={index}>{item.title}</li> //กำหนดtypeแบบ. 
       })
     }
     </div>
