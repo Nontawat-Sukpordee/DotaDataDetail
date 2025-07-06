@@ -8,9 +8,15 @@ const nextConfig: NextConfig = {
         protocol : "https",
         hostname : "fastly.picsum.photos",
         pathname : "/**"
-      }
+      },
+            {
+        protocol: 'https',
+        hostname: 'api.opendota.com',
+        pathname: '/**', // ให้โหลดได้ทุก path
+      },
     ]
   }
 };
+
 
 export default nextConfig;
